@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8"
+    xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="crud_quarto.QuartoListController"
+    prefWidth="800"
+    prefHeight="600"
+    stylesheets="@/Css/main.css">
+
+    <VBox spacing="15" alignment="TOP_CENTER" 
+          AnchorPane.topAnchor="20" 
+          AnchorPane.bottomAnchor="20" 
+          AnchorPane.leftAnchor="20" 
+          AnchorPane.rightAnchor="20">
+
+        <padding>
+            <Insets top="15" right="15" bottom="15" left="15" />
+        </padding>
+
+        <children>
+            <Label text="Gerenciamento de Quartos"
+                styleClass="titulo-principal" />
+
+            <TableView fx:id="tableQuartos" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="colId" text="ID" prefWidth="100" />
+                    <TableColumn fx:id="colIdentificacao" text="Número" prefWidth="200" />
+                    <TableColumn fx:id="colLocalizacao" text="Localização" prefWidth="300" />
+                    <TableColumn fx:id="colTipo" text="Tipo" prefWidth="200" />
+                    <TableColumn fx:id="colStatus" text="Status" prefWidth="200" />
+                    <TableColumn fx:id="colQuartos" text="Nº Quartos" prefWidth="160" />
+                    <TableColumn fx:id="colCliente" text="Ocupante" prefWidth="300" />
+                    <TableColumn fx:id="colValor" text="Valor" prefWidth="200" />
+                </columns>
+            </TableView>
+
+            <HBox spacing="15" alignment="CENTER" style="-fx-padding: 10 0 0 0;">
+
+                <Button onAction="#abrirCadastro" styleClass="button02">
+                    <graphic>
+                        <FontIcon iconLiteral="fas-plus" iconSize="16"/>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="Cadastrar Quarto"/>
+                    </tooltip>
+                </Button>
+
+                <Button onAction="#editarQuarto" styleClass="button02">
+                    <graphic>
+                        <FontIcon iconLiteral="fas-pen" iconSize="16"/>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="Editar Quarto"/>
+                    </tooltip>
+                </Button>
+
+                <Button onAction="#excluirQuarto" styleClass="button02">
+                    <graphic>
+                        <FontIcon iconLiteral="fas-trash" iconSize="16"/>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="Excluir Quarto"/>
+                    </tooltip>
+                </Button>
+
+            </HBox>
+        </children>
+    </VBox>
+</AnchorPane>

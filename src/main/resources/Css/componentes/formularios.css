@@ -1,0 +1,262 @@
+/* formularios.css - ESTILOS PARA FORMULÁRIOS NO SISTEMA */
+
+/* Estilo para o container do formulário */
+.form-container-centralizado {
+    -fx-alignment: CENTER;
+    -fx-spacing: 20px;
+    -fx-background-color: linear-gradient(to bottom, #1A1814, #2D2A24);
+    -fx-padding: 20px;
+    -fx-border-color: #D4AF37;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(212, 175, 55, 0.3), 15, 0, 0, 5);
+}
+
+.form-container-centralizado .hbox-centralizado {
+    -fx-alignment: CENTER;
+    -fx-spacing: 15px;
+}
+
+.form-container-centralizado .vbox-centralizado {
+    -fx-alignment: CENTER;
+    -fx-spacing: 15px;
+}
+
+/* Estilos para TextField */
+.text-field {
+    -fx-background-color: #000000;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #8B6B3D;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 8 12;
+    -fx-font-size: 14px;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+.text-field:focused {
+    -fx-border-color: #D4AF37;
+    -fx-effect: dropshadow(gaussian, rgba(212, 175, 55, 0.3), 4, 0.0, 0, 2);
+}
+
+.text-field:invalid {
+    -fx-border-color: red;
+    -fx-border-width: 2px;
+}
+
+/* Estilos para ComboBox */
+.combo-box {
+    -fx-background-color: #000000;
+    -fx-border-color: #8B6B3D;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 0;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: #000000;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #000000;
+    -fx-border-color: #8B6B3D;
+}
+
+.combo-box-popup .list-view .list-cell {
+    -fx-background-color: #000000;
+    -fx-text-fill: #ffffff;
+    -fx-padding: 8 12;
+}
+
+.combo-box-popup .list-view .list-cell:filled:hover {
+    -fx-background-color: #D4AF37;
+    -fx-text-fill: #000000;
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected {
+    -fx-background-color: #D4AF37;
+    -fx-text-fill: #000000;
+}
+
+.combo-box .arrow {
+    -fx-background-color: #D4AF37;
+}
+
+/* Estilos para Spinner */
+.spinner {
+    -fx-background-color: #000000;
+    -fx-border-color: #8B6B3D;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.spinner .text-field {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+    -fx-background-color: #000000;
+    -fx-border-color: #8B6B3D;
+}
+
+.spinner .increment-arrow-button:hover,
+.spinner .decrement-arrow-button:hover {
+    -fx-background-color: #D4AF37;
+}
+
+.spinner .increment-arrow,
+.spinner .decrement-arrow {
+    -fx-background-color: #D4AF37;
+}
+
+/* Estilos para TextArea */
+.text-area {
+    -fx-background-color: #000000;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #8B6B3D;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 8 12;
+    -fx-font-size: 14px;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+.text-area .content {
+    -fx-background-color: #000000;
+}
+
+.text-area:focused {
+    -fx-border-color: #D4AF37;
+    -fx-effect: dropshadow(gaussian, rgba(212, 175, 55, 0.3), 4, 0.0, 0, 2);
+}
+
+/* Estilos para Labels */
+.label {
+    -fx-text-fill: #F5F5DC;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+    -fx-font-weight: bold;
+}
+
+/* Botões com texto completo */
+.button-texto-completo {
+    -fx-min-width: 120px;
+    -fx-pref-width: 120px;
+    -fx-max-width: 120px;
+    -fx-wrap-text: false;
+}
+
+.button-largo {
+    -fx-min-width: 150px;
+    -fx-pref-width: 150px;
+    -fx-max-width: 150px;
+    -fx-wrap-text: false;
+}
+
+/* Centralização real na tela */
+.conteudo-centralizado {
+    -fx-alignment: CENTER;
+}
+
+.form-container-tela-inteira {
+    -fx-alignment: CENTER;
+    -fx-spacing: 20px;
+    -fx-pref-width: 100%;
+    -fx-pref-height: 100%;
+}
+
+/* Container que ocupa toda a tela */
+.container-tela-inteira {
+    -fx-alignment: CENTER;
+    -fx-background-color: -fx-color-background;
+}
+
+/* Estilos específicos para o modal de quartos */
+.conteudo-container {
+    -fx-background-color: linear-gradient(to bottom, #0C0B0B, #1A1814);
+}
+
+/* Estilo para o título do modal */
+.titulo-modal {
+    -fx-font-size: 35px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #D4AF37;
+    -fx-effect: dropshadow(one-pass-box, rgba(212, 175, 55, 0.6), 8, 0.0, 0, 2);
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+/* Estilo para campos obrigatórios */
+.campo-obrigatorio {
+    -fx-text-fill: #D4AF37;
+}
+
+.campo-obrigatorio .text {
+    -fx-fill: #D4AF37;
+}
+
+/* Estilo para tooltips */
+.tooltip {
+    -fx-background-color: #1A1814;
+    -fx-text-fill: #F5F5DC;
+    -fx-border-color: #D4AF37;
+    -fx-border-width: 1px;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+/* Estilos para DatePicker (para referência futura) */
+.date-picker {
+    -fx-background-color: #000000;
+    -fx-border-color: #8B6B3D;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.date-picker .text-field {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.date-picker .arrow-button {
+    -fx-background-color: #000000;
+}
+
+.date-picker .arrow {
+    -fx-background-color: #D4AF37;
+}
+
+.date-picker-popup {
+    -fx-background-color: #000000;
+    -fx-border-color: #8B6B3D;
+}
+
+.date-picker-popup .month-year-pane {
+    -fx-background-color: #1A1814;
+}
+
+.date-picker-popup .spinner-label {
+    -fx-text-fill: #F5F5DC;
+}
+
+.date-picker-popup .day-cell {
+    -fx-background-color: #000000;
+    -fx-text-fill: #F5F5DC;
+}
+
+.date-picker-popup .day-cell:hover {
+    -fx-background-color: #D4AF37;
+    -fx-text-fill: #000000;
+}
+
+.date-picker-popup .day-cell:selected {
+    -fx-background-color: #D4AF37;
+    -fx-text-fill: #000000;
+}

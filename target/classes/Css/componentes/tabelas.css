@@ -1,0 +1,96 @@
+/* tabelas.css */
+.table-view {
+    -fx-background-color: #000000; /* Fundo branco */
+    -fx-border-color: #000000; /* Borda preta ao redor da tabela */
+    -fx-border-width: 1px;
+}
+
+.table-view .column-header {
+    -fx-background-color: linear-gradient(to bottom, #1A1814, #2D2A24);
+    -fx-text-fill: #F5F5DC; /* Texto claro no cabeçalho */
+    -fx-border-color: #000000; /* Divisórias pretas no cabeçalho */
+    -fx-border-width: 0 1px 1px 0;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #F5F5DC; /* Texto claro no cabeçalho */
+}
+
+/* Células da tabela - CORRIGIDO */
+.table-view .table-cell {
+    -fx-text-fill: #000000; /* Texto preto nas células */
+    -fx-border-color: #000000; /* Divisórias pretas entre células */
+    -fx-border-width: 0 1px 1px 0;
+    -fx-background-color: transparent; /* Fundo transparente para as células */
+}
+
+.table-row-cell:even {
+    -fx-background-color: #f8f8f8; /* Cinza muito claro para linhas pares */
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #ffffff; /* Branco para linhas ímpares */
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #D4AF37; /* Dourado quando selecionado */
+}
+
+/* Texto da célula quando selecionada - CORRIGIDO */
+.table-row-cell:selected .table-cell {
+    -fx-text-fill: #000000; /* Texto preto quando selecionado */
+    -fx-border-color: #000000; /* Mantém as bordas pretas mesmo quando selecionado */
+}
+
+/* Alinhamento e padding das células */
+.table-cell {
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 5 10 5 10;
+}
+
+/* Estilo específico para coluna numérica (ID, Nº Quartos) */
+.table-column .table-cell {
+    -fx-alignment: CENTER;
+}
+
+/* Garantir que o texto seja escuro em todos os estados */
+.table-view .cell {
+    -fx-text-fill: #000000;
+}
+
+/* Sobrescrever qualquer estilo padrão do JavaFX */
+.table-row-cell .text {
+    -fx-fill: #000000;
+}
+
+.table-row-cell:selected .text {
+    -fx-fill: #000000;
+}
+
+/* Linhas de grade da tabela - ADICIONADO PARA MELHOR VISUALIZAÇÃO */
+.table-view .column-header-background {
+    -fx-background-color: #000000;
+    -fx-border-color: #000000;
+    -fx-border-width: 0 0 1px 0; /* Linha preta abaixo do cabeçalho */
+}
+
+/* Remove as linhas de grade padrão do JavaFX e substitui pelas nossas bordas */
+.table-view {
+    -fx-table-cell-border-color: transparent; /* Remove bordas padrão */
+    -fx-table-header-border-color: transparent; /* Remove bordas do cabeçalho padrão */
+}
+
+/* Scrollbar */
+.table-view .scroll-bar * {
+    -fx-background-color: #000000;
+}
+
+/* Adiciona borda na última coluna para completar o visual */
+.table-view .table-row-cell:last-child .table-cell {
+    -fx-border-width: 0 1px 1px 0; /* Mantém a borda direita na última coluna */
+}
+
+/* Remove a borda direita da última coluna para não ter borda duplicada */
+.table-view .table-column:last-child .table-cell {
+    -fx-border-width: 0 0 1px 0; /* Remove borda direita da última coluna */
+}

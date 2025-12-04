@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence 
+             https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+
+    <persistence-unit name="Newroyale" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        
+        <class>model.Quarto</class>
+        <class>model.Cliente</class>
+        
+        <properties>
+            <!-- Database settings - Neon com configuração robusta -->
+            <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" 
+                      value="jdbc:postgresql://ep-divine-art-ac4h89yl-pooler.sa-east-1.aws.neon.tech/neondb?sslmode=require&amp;ssl=true&amp;sslfactory=org.postgresql.ssl.NonValidatingFactory"/>
+            <property name="jakarta.persistence.jdbc.user" value="neondb_owner"/>
+            <property name="jakarta.persistence.jdbc.password" value="npg_JOZfU8PwXR7x"/>
+            
+            <!-- Hibernate settings -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            
+            <!-- Pool de conexões otimizado para Neon -->
+            <property name="hibernate.c3p0.min_size" value="3"/>
+            <property name="hibernate.c3p0.max_size" value="10"/>
+            <property name="hibernate.c3p0.timeout" value="180"/>
+            <property name="hibernate.c3p0.max_statements" value="25"/>
+            <property name="hibernate.c3p0.idle_test_period" value="1500"/>
+            <property name="hibernate.c3p0.acquire_increment" value="1"/>
+            
+            <!-- Configurações de estabilidade -->
+            <property name="hibernate.connection.autocommit" value="false"/>
+            <property name="hibernate.jdbc.time_zone" value="America/Sao_Paulo"/>
+            <property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"/>
+        </properties>
+    </persistence-unit>
+</persistence>

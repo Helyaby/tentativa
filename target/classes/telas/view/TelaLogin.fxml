@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8"
+    xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="login_controller.LoginController"
+    prefWidth="400" prefHeight="500"
+    stylesheets="@/Css/main.css"
+    styleClass="login-container">
+
+    <VBox spacing="30" alignment="CENTER" prefWidth="400" prefHeight="500">
+        <padding>
+            <Insets top="40" right="40" bottom="40" left="40" />
+        </padding>
+
+        <!-- Logo -->
+        <ImageView fitHeight="120" fitWidth="120" preserveRatio="true">
+            <image>
+                <Image url="@/imagens/Hotel_New_Royale.png" />
+            </image>
+        </ImageView>
+
+        <!-- Título -->
+        <Label text="Hotel New Royale"
+            styleClass="login-titulo" />
+
+        <!-- Formulário de Login -->
+        <VBox spacing="20" alignment="CENTER" prefWidth="320">
+            <VBox spacing="8" alignment="CENTER_LEFT" prefWidth="320">
+                <Label text="Usuário" styleClass="login-label" />
+                <TextField fx:id="txtUsuario" promptText="Digite seu usuário"
+                    styleClass="login-field" prefWidth="320" />
+            </VBox>
+
+            <VBox spacing="8" alignment="CENTER_LEFT" prefWidth="320">
+                <Label text="Senha" styleClass="login-label" />
+                <PasswordField fx:id="txtSenha" promptText="Digite sua senha"
+                    styleClass="login-field" prefWidth="320" />
+            </VBox>
+
+            <!-- Botão de Login -->
+            <Button text="Entrar" onAction="#fazerLogin"
+                styleClass="button02 login-button"
+                prefWidth="320" />
+        </VBox>
+
+        <!-- Rodapé -->
+        <Label text="Sistema de Gerenciamento Hoteleiro"
+            styleClass="login-rodape" />
+    </VBox>
+</AnchorPane>

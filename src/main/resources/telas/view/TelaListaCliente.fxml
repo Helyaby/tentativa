@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8"
+    xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="crud_cliente.ClienteListController"
+    prefWidth="800"
+    prefHeight="600"
+    stylesheets="@/Css/main.css">
+    
+
+    <VBox spacing="15" alignment="TOP_CENTER" 
+          AnchorPane.topAnchor="20" 
+          AnchorPane.bottomAnchor="20" 
+          AnchorPane.leftAnchor="20" 
+          AnchorPane.rightAnchor="20">
+
+        <padding>
+            <Insets top="15" right="15" bottom="15" left="15"/>
+        </padding>
+
+        <children>
+            <Label text="Gerenciamento de Clientes"
+                styleClass="titulo-principal" />
+
+            <TableView fx:id="tableClientes" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="colId" text="ID" prefWidth="100" />
+                    <TableColumn fx:id="colCpf" text="CPF" prefWidth="240" />
+                    <TableColumn fx:id="colNome" text="Nome" prefWidth="400" />
+                    <TableColumn fx:id="colEmail" text="Email" prefWidth="400" />
+                    <TableColumn fx:id="colTelefone" text="Telefone" prefWidth="200" />
+                    <TableColumn fx:id="colCidade" text="Cidade" prefWidth="310" />
+                </columns>
+            </TableView>
+
+            <HBox spacing="15" alignment="CENTER" style="-fx-padding: 10 0 0 0;">
+
+                <Button onAction="#abrirCadastro" styleClass="button02">
+                    <graphic>
+                        <FontIcon iconLiteral="fas-user-plus" iconSize="16"/>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="Cadastrar Cliente"/>
+                    </tooltip>
+                </Button>
+
+                <Button onAction="#editarCliente" styleClass="button02">
+                    <graphic>
+                        <FontIcon iconLiteral="fas-edit" iconSize="16"/>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="Editar Cliente"/>
+                    </tooltip>
+                </Button>
+
+                <Button onAction="#excluirCliente" styleClass="button02">
+                    <graphic>
+                        <FontIcon iconLiteral="fas-trash-alt" iconSize="16"/>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="Excluir Cliente"/>
+                    </tooltip>
+                </Button>
+                
+            </HBox>
+        </children>
+    </VBox>
+</AnchorPane>

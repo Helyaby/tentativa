@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="crud_quarto.QuartoCreateController"
+            prefWidth="720" prefHeight="620"
+            stylesheets="@/Css/main.css"
+            styleClass="conteudo-container">
+
+    <VBox spacing="20" alignment="TOP_CENTER" 
+          AnchorPane.topAnchor="10" AnchorPane.bottomAnchor="10" 
+          AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10"
+          styleClass="form-container-centralizado">
+
+        <children>      
+            <Label text="Cadastro de Quarto" 
+                   styleClass="titulo-modal" />
+
+            <!-- Grid para organizar os campos em duas colunas -->
+            <GridPane hgap="15" vgap="15" alignment="CENTER" 
+                      prefWidth="650" maxWidth="650">
+                <columnConstraints>
+                    <ColumnConstraints prefWidth="150" halignment="RIGHT"/>
+                    <ColumnConstraints prefWidth="200"/>
+                    <ColumnConstraints prefWidth="150" halignment="RIGHT"/>
+                    <ColumnConstraints prefWidth="200"/>
+                </columnConstraints>
+                
+                <children>
+                    <!-- Linha 1 -->
+                    <Label text="Identificação:*" styleClass="label campo-obrigatorio" 
+                           GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <TextField fx:id="txtNumero" promptText="Ex: Quarto 1" 
+                               styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                    
+                    <Label text="Valor:*" styleClass="label campo-obrigatorio" 
+                           GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                    <TextField fx:id="txtValor" promptText="Ex: 150.00" 
+                               styleClass="text-field" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+                    
+                    <!-- Linha 2 -->
+                    <Label text="Localização:*" styleClass="label campo-obrigatorio" 
+                           GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                    <TextField fx:id="txtLocalizacao" styleClass="text-field" 
+                               GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                    
+                    <Label text="Tipo Quarto:*" styleClass="label campo-obrigatorio" 
+                           GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                    <ComboBox fx:id="comboTipo" promptText="Selecione o tipo" 
+                              styleClass="combo-box" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+                    
+                    <!-- Linha 3 -->
+                    <Label text="Nº de Quartos:" styleClass="label" 
+                           GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                    <Spinner fx:id="spinnerNumeroQuartos" styleClass="spinner"
+                             GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                    
+                    <Label text="Situação:*" styleClass="label campo-obrigatorio" 
+                           GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+                    <ComboBox fx:id="comboSituacao" promptText="Selecione situação" 
+                              styleClass="combo-box" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+                </children>
+            </GridPane>
+
+            <!-- Observações -->
+            <VBox spacing="5" alignment="CENTER_LEFT" prefWidth="650" maxWidth="650">
+                <Label text="Observações:" styleClass="label" />
+                <TextArea fx:id="txtObservacoes" prefRowCount="3" prefWidth="650" 
+                          styleClass="text-area" promptText="Digite observações sobre o quarto..." />
+            </VBox>
+
+            <!-- Botões centralizados -->
+            <HBox spacing="20" alignment="CENTER" styleClass="hbox-centralizado">
+              <Button text="Salvar" onAction="#salvarQuarto" styleClass="button02 button-texto-completo" />
+              <Button text="Limpar" onAction="#limparCampos" styleClass="button02 button-texto-completo" />
+              <Button text="Voltar" onAction="#voltar" styleClass="button02 button-texto-completo" />
+            </HBox>
+        </children>
+
+        <padding>
+            <Insets top="20" right="20" bottom="20" left="20" />
+        </padding>
+    </VBox>
+</AnchorPane>

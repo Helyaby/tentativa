@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.Insets?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8"
+    xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="boasvindas.BoasVindasController"
+    prefWidth="1000" prefHeight="700"
+    stylesheets="@/Css/main.css"
+    styleClass="welcome-container">
+
+    <VBox spacing="30" alignment="CENTER" 
+          AnchorPane.topAnchor="0" AnchorPane.rightAnchor="0" 
+          AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0">
+        
+        <!-- Logo e Título Principal -->
+        <VBox spacing="10" alignment="CENTER">
+            <!-- Estrelas superiores -->
+            <HBox spacing="15" alignment="CENTER">
+                <FontIcon iconLiteral="fas-star" styleClass="decorative-star"/>
+                <FontIcon iconLiteral="fas-star" styleClass="decorative-star"/>
+                <FontIcon iconLiteral="fas-star" styleClass="decorative-star"/>
+            </HBox>
+            
+            <ImageView fitHeight="250" fitWidth="250" preserveRatio="true">
+                <image>
+                    <Image url="@/imagens/Hotel_New_Royale.png" />
+                </image>
+            </ImageView>
+            
+            <Label text="Hotel New Royale" 
+                   styleClass="welcome-main-title" />
+            
+            <!-- Estrelas inferiores -->
+            <HBox spacing="15" alignment="CENTER">
+                <FontIcon iconLiteral="fas-star" styleClass="decorative-star"/>
+                <FontIcon iconLiteral="fas-star" styleClass="decorative-star"/>
+                <FontIcon iconLiteral="fas-star" styleClass="decorative-star"/>
+            </HBox>
+            
+            <Label text="Bem-vindo à Equipe!" 
+                   styleClass="welcome-subtitle" />
+        </VBox>
+
+        <!-- Mensagem de Boas-Vindas Personalizada -->
+        <VBox spacing="15" alignment="CENTER" prefWidth="600">
+            <!-- Linha decorativa com estrelas -->
+            <HBox spacing="8" alignment="CENTER">
+                <FontIcon iconLiteral="fas-star" styleClass="small-decorative-star"/>
+                <FontIcon iconLiteral="fas-star" styleClass="small-decorative-star"/>
+                <FontIcon iconLiteral="fas-user-tie" styleClass="welcome-icon-small"/>
+                <FontIcon iconLiteral="fas-star" styleClass="small-decorative-star"/>
+                <FontIcon iconLiteral="fas-star" styleClass="small-decorative-star"/>
+            </HBox>
+            
+            <Label text="Seu trabalho é essencial para nossa excelência" 
+                   styleClass="welcome-greeting" />
+            
+            <Label fx:id="labelUsuario" text="Prezado Funcionário" 
+                   styleClass="welcome-username" />
+            
+            <Label text="Juntos oferecemos a melhor experiência aos nossos hóspedes!" 
+                   styleClass="welcome-message" />
+        </VBox>
+        <!-- Estrelas decorativas no rodapé -->
+        <HBox spacing="20" alignment="CENTER">
+            <FontIcon iconLiteral="fas-star" styleClass="decorative-star"/>
+            <FontIcon iconLiteral="fas-star" styleClass="decorative-star"/>
+            <FontIcon iconLiteral="fas-star" styleClass="decorative-star"/>
+            <FontIcon iconLiteral="fas-star" styleClass="decorative-star"/>
+            <FontIcon iconLiteral="fas-star" styleClass="decorative-star"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+    xmlns:fx="http://javafx.com/fxml"
+    fx:controller="dashboard.DashboardController"
+    prefWidth="1000" prefHeight="700"
+    stylesheets="@/Css/main.css"
+    styleClass="welcome-container">
+
+    <VBox spacing="25" alignment="TOP_CENTER" 
+          AnchorPane.topAnchor="0" AnchorPane.rightAnchor="0" 
+          AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0"
+          styleClass="dashboard-content">
+
+        <padding>
+            <Insets top="25" right="25" bottom="25" left="25"/>
+        </padding>
+
+        <!-- Título com estilo dourado -->
+        <Label text="🏨 Dashboard - Hotel New Royale"
+            styleClass="dashboard-main-title" />
+
+        <!-- Primeira linha: Cards de métricas -->
+        <HBox spacing="20" alignment="CENTER" prefHeight="120">
+            <VBox styleClass="dashboard-card-welcome" spacing="8" prefWidth="200">
+                <Label text="Total de Quartos" styleClass="card-titulo-welcome"/>
+                <Label fx:id="labelTotalQuartos" text="0" styleClass="card-valor-welcome"/>
+                <Label text="Capacidade total" styleClass="card-descricao-welcome"/>
+            </VBox>
+
+            <VBox styleClass="dashboard-card-welcome" spacing="8" prefWidth="200">
+                <Label text="Quartos Ocupados" styleClass="card-titulo-welcome"/>
+                <Label fx:id="labelQuartosOcupados" text="0" styleClass="card-valor-welcome ocupados"/>
+                <Label text="Taxa de ocupação" styleClass="card-descricao-welcome"/>
+            </VBox>
+
+            <VBox styleClass="dashboard-card-welcome" spacing="8" prefWidth="200">
+                <Label text="Quartos Disponíveis" styleClass="card-titulo-welcome"/>
+                <Label fx:id="labelQuartosDisponiveis" text="0" styleClass="card-valor-welcome disponiveis"/>
+                <Label text="Prontos para check-in" styleClass="card-descricao-welcome"/>
+            </VBox>
+
+            <VBox styleClass="dashboard-card-welcome" spacing="8" prefWidth="200">
+                <Label text="Total de Clientes" styleClass="card-titulo-welcome"/>
+                <Label fx:id="labelTotalClientes" text="0" styleClass="card-valor-welcome"/>
+                <Label text="Clientes cadastrados" styleClass="card-descricao-welcome"/>
+            </VBox>
+        </HBox>
+
+        <!-- Segunda linha: Métricas Financeiras -->
+        <HBox spacing="20" alignment="CENTER" prefHeight="120">
+            <VBox styleClass="dashboard-card-welcome" spacing="8" prefWidth="200">
+                <Label text="Faturamento Mensal" styleClass="card-titulo-welcome"/>
+                <Label fx:id="labelFaturamentoMensal" text="R$ 0,00" styleClass="card-valor-welcome faturamento"/>
+                <Label text="Mês atual" styleClass="card-descricao-welcome"/>
+            </VBox>
+
+            <VBox styleClass="dashboard-card-welcome" spacing="8" prefWidth="200">
+                <Label text="Taxa de Ocupação" styleClass="card-titulo-welcome"/>
+                <Label fx:id="labelTaxaOcupacao" text="0%" styleClass="card-valor-welcome"/>
+                <Label text="Média do mês" styleClass="card-descricao-welcome"/>
+            </VBox>
+
+            <VBox styleClass="dashboard-card-welcome" spacing="8" prefWidth="200">
+                <Label text="Check-ins Hoje" styleClass="card-titulo-welcome"/>
+                <Label fx:id="labelCheckinsHoje" text="0" styleClass="card-valor-welcome"/>
+                <Label text="Entradas do dia" styleClass="card-descricao-welcome"/>
+            </VBox>
+
+            <VBox styleClass="dashboard-card-welcome" spacing="8" prefWidth="200">
+                <Label text="Check-outs Hoje" styleClass="card-titulo-welcome"/>
+                <Label fx:id="labelCheckoutsHoje" text="0" styleClass="card-valor-welcome"/>
+                <Label text="Saídas do dia" styleClass="card-descricao-welcome"/>
+            </VBox>
+        </HBox>
+
+        <!-- Terceira linha: Apenas o Gráfico de Pizza Centralizado -->
+        <HBox spacing="25" alignment="CENTER" prefHeight="350">
+            <!-- Gráfico de Pizza - Distribuição de Quartos (Centralizado e maior) -->
+            <VBox styleClass="grafico-container-welcome" spacing="12" prefWidth="900">
+                <Label text="📊 Distribuição de Quartos" styleClass="grafico-titulo-welcome"/>
+                <PieChart fx:id="pieChartOcupacao" prefWidth="850" prefHeight="300"/>
+            </VBox>
+        </HBox>
+
+    </VBox>
+</AnchorPane>

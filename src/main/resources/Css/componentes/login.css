@@ -1,0 +1,47 @@
+.login-container {
+    -fx-background-color: linear-gradient(to bottom, #1A1814, #2D2A24);
+}
+
+.login-titulo {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #D4AF37;
+    -fx-effect: dropshadow(one-pass-box, rgba(212, 175, 55, 0.6), 8, 0.0, 0, 2);
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+.login-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #F5F5DC;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+.login-field {
+    -fx-background-color: #000000;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #8B6B3D;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 8 12;
+    -fx-font-size: 14px;
+}
+
+.login-field:focused {
+    -fx-border-color: #D4AF37;
+    -fx-effect: dropshadow(gaussian, rgba(212, 175, 55, 0.3), 4, 0.0, 0, 2);
+}
+
+.login-button {
+    -fx-min-height: 45px;
+    -fx-font-size: 16px !important;
+    -fx-font-weight: bold !important;
+}
+
+.login-rodape {
+    -fx-font-size: 12px;
+    -fx-text-fill: #C5B358;
+    -fx-font-style: italic;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}

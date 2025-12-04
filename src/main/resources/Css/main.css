@@ -1,0 +1,757 @@
+/* main.css */
+
+/* Importação de todos os módulos CSS */
+@import "cores.css";
+@import "layouts/navegacao.css";
+@import "layouts/cabecalho.css";
+@import "componentes/botoes.css";
+@import "componentes/formularios.css";
+@import "componentes/tabelas.css";
+@import "componentes/login.css";
+@import "componentes/modais.css";
+@import "layouts/paginacao.css";
+
+/* Estilos globais adicionais, se necessário */
+.root {
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+    -fx-background-color: -fx-color-background;
+    /* ADICIONE ESTA LINHA */
+}
+
+/* Efeitos de sombra padrão */
+.shadow-effect {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 15, 0, 0, 3);
+}
+
+.shadow-light {
+    -fx-effect: dropshadow(gaussian, rgba(212, 175, 55, 0.5), 6, 0, 0, 3);
+}
+
+/* Estilo para containers de conteúdo */
+.conteudo-container {
+    -fx-background-color: -fx-color-background;
+}
+
+/* Adicione isto ao main.css */
+.table-container {
+    -fx-background-color: #0C0B0B;
+}
+
+/* Garantir que o StackPane ocupe toda a tela */
+.container-tela-inteira {
+    -fx-background-color: -fx-color-background;
+}
+
+/* Remover larguras fixas para permitir expansão */
+.form-container-tela-inteira {
+    -fx-alignment: CENTER;
+    -fx-spacing: 20px;
+    -fx-max-width: 800px;
+    /* Largura máxima para não ficar muito largo */
+    -fx-padding: 20px;
+}
+
+/* Container para tabelas centralizadas */
+.container-tabela {
+    -fx-alignment: TOP_CENTER;
+    -fx-spacing: 15px;
+    -fx-padding: 20px;
+    -fx-pref-width: 100%;
+}
+
+.tabela-centralizada {
+    -fx-alignment: CENTER;
+    -fx-pref-width: 100%;
+    /* ⬅️ 100% da largura disponível */
+    -fx-max-width: 100%;
+    /* ⬅️ 100% da largura disponível */
+    -fx-pref-height: 400px;
+}
+
+/* Ajuste para formulários no topo */
+.form-container-topo {
+    -fx-alignment: TOP_CENTER;
+    -fx-spacing: 20px;
+    -fx-max-width: 800px;
+    -fx-padding: 30px 20px 20px 20px;
+}
+
+/* Dashboard Styles */
+.dashboard-titulo {
+    -fx-font-size: 28px;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 10px 0;
+}
+
+.dashboard-card {
+    -fx-background-color: #34495e;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-padding: 15px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);
+    -fx-alignment: center;
+}
+
+.card-titulo {
+    -fx-text-fill: #bdc3c7;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.card-valor {
+    -fx-text-fill: #ecf0f1;
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+}
+
+.card-valor.ocupados {
+    -fx-text-fill: #e74c3c;
+}
+
+.card-valor.disponiveis {
+    -fx-text-fill: #2ecc71;
+}
+
+.card-valor.faturamento {
+    -fx-text-fill: #f39c12;
+}
+
+.card-descricao {
+    -fx-text-fill: #95a5a6;
+    -fx-font-size: 12px;
+}
+
+.grafico-container {
+    -fx-background-color: #2c3e50;
+    -fx-background-radius: 10px;
+    -fx-padding: 15px;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);
+}
+
+.grafico-titulo {
+    -fx-text-fill: #ecf0f1;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.lista-dashboard {
+    -fx-background-color: transparent;
+    -fx-border-color: #34495e;
+    -fx-border-radius: 5px;
+    -fx-text-fill: #ecf0f1;
+}
+
+.lista-dashboard .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ecf0f1;
+    -fx-padding: 5px;
+}
+
+.lista-dashboard .list-cell:even {
+    -fx-background-color: #34495e;
+}
+
+.lista-dashboard .list-cell:odd {
+    -fx-background-color: #2c3e50;
+}
+
+/* Estilos para os gráficos */
+.chart {
+    -fx-background-color: transparent;
+}
+
+.chart-legend {
+    -fx-background-color: transparent;
+}
+
+.chart-legend-item {
+    -fx-text-fill: #ecf0f1;
+}
+
+.axis {
+    -fx-tick-label-fill: #ecf0f1;
+}
+
+.axis-label {
+    -fx-text-fill: #ecf0f1;
+}
+
+
+/* Estilos para ícones da tela de boas-vindas - TAMANHOS REDUZIDOS */
+.welcome-icon-small {
+    -fx-icon-size: 20px;  /* Reduzido */
+    -fx-fill: #D4AF37;
+}
+
+.section-icon-small {
+    -fx-icon-size: 18px;  /* Reduzido */
+    -fx-fill: #D4AF37;
+}
+
+.service-icon-small {
+    -fx-icon-size: 22px;  /* Reduzido */
+    -fx-fill: #D4AF37;
+}
+
+.info-icon-small {
+    -fx-icon-size: 16px;  /* Reduzido */
+    -fx-fill: #D4AF37;
+}
+
+.feature-icon-small {
+    -fx-icon-size: 16px;  /* Reduzido */
+    -fx-fill: #D4AF37;
+}
+
+.feature-text {
+    -fx-font-size: 11px;  /* Reduzido */
+    -fx-text-fill: #C5B358;
+    -fx-font-weight: bold;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+.emergency-text {
+    -fx-font-size: 13px;  /* Reduzido */
+    -fx-text-fill: #e74c3c;
+    -fx-font-weight: bold;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+.info-section-title {
+    -fx-font-size: 16px;  /* Reduzido */
+    -fx-text-fill: #F5F5DC;
+    -fx-font-weight: bold;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+/* Estilos gerais atualizados */
+.welcome-container {
+    -fx-background-color: linear-gradient(to bottom, #0C0B0B, #1A1814, #2D2A24);
+    -fx-padding: 20px;
+}
+
+.welcome-main-title {
+    -fx-font-size: 36px;  /* Reduzido */
+    -fx-font-weight: bold;
+    -fx-text-fill: #D4AF37;
+    -fx-effect: dropshadow(three-pass-box, rgba(212, 175, 55, 0.8), 15, 0, 0, 5);
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+.welcome-subtitle {
+    -fx-font-size: 18px;  /* Reduzido */
+    -fx-text-fill: #C5B358;
+    -fx-font-style: italic;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+.welcome-greeting {
+    -fx-font-size: 20px;  /* Reduzido */
+    -fx-text-fill: #F5F5DC;
+    -fx-font-weight: bold;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+.welcome-username {
+    -fx-font-size: 24px;  /* Reduzido */
+    -fx-text-fill: #D4AF37;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(one-pass-box, rgba(212, 175, 55, 0.6), 8, 0.0, 0, 2);
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+.welcome-message {
+    -fx-font-size: 14px;  /* Reduzido */
+    -fx-text-fill: #B8B8B8;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+.welcome-card {
+    -fx-background-color: rgba(26, 24, 20, 0.8);
+    -fx-background-radius: 8px;  /* Reduzido */
+    -fx-border-color: #D4AF37;
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;  /* Reduzido */
+    -fx-padding: 15px;  /* Reduzido */
+    -fx-effect: dropshadow(three-pass-box, rgba(212, 175, 55, 0.3), 8, 0, 0, 2);  /* Reduzido */
+}
+
+.card-value {
+    -fx-font-size: 14px;  /* Reduzido */
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+.card-label {
+    -fx-font-size: 11px;  /* Reduzido */
+    -fx-text-fill: #C5B358;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+.section-title {
+    -fx-font-size: 20px;  /* Reduzido */
+    -fx-text-fill: #F5F5DC;
+    -fx-font-weight: bold;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+.footer-info {
+    -fx-padding: 15px;  /* Reduzido */
+    -fx-background-color: rgba(26, 24, 20, 0.6);
+    -fx-background-radius: 6px;  /* Reduzido */
+    -fx-border-color: #8B6B3D;
+    -fx-border-width: 1px;
+    -fx-border-radius: 6px;  /* Reduzido */
+}
+
+.info-text {
+    -fx-font-size: 13px;  /* Reduzido */
+    -fx-text-fill: #C5B358;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+
+.info-version {
+    -fx-font-size: 11px;  /* Reduzido */
+    -fx-text-fill: #8B6B3D;
+    -fx-font-style: italic;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+/* Estilos para estrelas decorativas */
+.decorative-star {
+    -fx-icon-size: 24px;
+    -fx-fill: #D4AF37;
+    -fx-opacity: 0.8;
+}
+
+.small-decorative-star {
+    -fx-icon-size: 12px;
+    -fx-fill: #C5B358;
+    -fx-opacity: 0.6;
+}
+
+.footer-star {
+    -fx-icon-size: 16px;
+    -fx-fill: #8B6B3D;
+    -fx-opacity: 0.4;
+}
+
+/* Container para data e hora */
+.datetime-container {
+    -fx-padding: 15px;
+    -fx-background-color: rgba(26, 24, 20, 0.6);
+    -fx-background-radius: 10px;
+    -fx-border-color: #D4AF37;
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+}
+
+.datetime-icon {
+    -fx-icon-size: 16px;
+    -fx-fill: #C5B358;
+}
+
+.datetime-text {
+    -fx-font-size: 14px;
+    -fx-text-fill: #F5F5DC;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+.datetime-time {
+    -fx-font-size: 18px;
+    -fx-text-fill: #D4AF37;
+    -fx-font-weight: bold;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+/* Ajustes nos estilos existentes para melhor espaçamento */
+.welcome-container {
+    -fx-background-color: linear-gradient(to bottom, #0C0B0B, #1A1814, #2D2A24);
+    -fx-padding: 40px 20px;
+}
+
+.welcome-main-title {
+    -fx-font-size: 42px;  /* Aumentado ligeiramente */
+    -fx-font-weight: bold;
+    -fx-text-fill: #D4AF37;
+    -fx-effect: dropshadow(three-pass-box, rgba(212, 175, 55, 0.8), 20, 0, 0, 5);
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+    -fx-padding: 10px 0;
+}
+
+.welcome-subtitle {
+    -fx-font-size: 20px;  /* Aumentado ligeiramente */
+    -fx-text-fill: #C5B358;
+    -fx-font-style: italic;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+    -fx-padding: 5px 0;
+}
+
+.welcome-greeting {
+    -fx-font-size: 22px;  /* Aumentado ligeiramente */
+    -fx-text-fill: #F5F5DC;
+    -fx-font-weight: bold;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+    -fx-padding: 10px 0;
+}
+
+.welcome-username {
+    -fx-font-size: 28px;  /* Aumentado ligeiramente */
+    -fx-text-fill: #D4AF37;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(one-pass-box, rgba(212, 175, 55, 0.6), 10, 0.0, 0, 3);
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+    -fx-padding: 15px 0;
+}
+
+.welcome-message {
+    -fx-font-size: 16px;  /* Aumentado ligeiramente */
+    -fx-text-fill: #B8B8B8;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+    -fx-padding: 10px 0;
+}   
+
+/* Estilo adicional para o título da tela de ocupação */
+.titulo-modal {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #D4AF37;
+    -fx-effect: dropshadow(three-pass-box, rgba(212, 175, 55, 0.8), 15, 0, 0, 5);
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+    -fx-padding: 0 0 10px 0;
+}
+
+/* Ajuste para o container do formulário */
+.form-container-centralizado {
+    -fx-alignment: CENTER;
+    -fx-spacing: 25px;
+    -fx-background-color: linear-gradient(to bottom, #1A1814, #2D2A24);
+    -fx-padding: 30px;
+    -fx-border-color: #D4AF37;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(212, 175, 55, 0.3), 15, 0, 0, 5);
+}
+
+/* Estilos para elementos grandes na tela de ocupação */
+.titulo-grande {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #D4AF37;
+    -fx-effect: dropshadow(three-pass-box, rgba(212, 175, 55, 0.8), 20, 0, 0, 5);
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+    -fx-padding: 0 0 20px 0;
+}
+
+.label-grande {
+    -fx-font-size: 18px;
+    -fx-text-fill: #F5F5DC;
+    -fx-font-weight: bold;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+.combo-box-grande {
+    -fx-background-color: #000000;
+    -fx-border-color: #8B6B3D;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 0;
+    -fx-font-size: 16px;
+    -fx-pref-height: 40px;
+}
+
+.combo-box-grande .list-cell {
+    -fx-background-color: #000000;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 16px;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+.text-field-grande {
+    -fx-background-color: #000000;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #8B6B3D;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 12 15;
+    -fx-font-size: 16px;
+    -fx-pref-height: 40px;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+.date-picker-grande {
+    -fx-background-color: #000000;
+    -fx-border-color: #8B6B3D;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-font-size: 16px;
+    -fx-pref-height: 40px;
+}
+
+.date-picker-grande .text-field {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-size: 16px;
+    -fx-pref-height: 40px;
+}
+
+.text-area-grande {
+    -fx-background-color: #000000;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #8B6B3D;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 12 15;
+    -fx-font-size: 16px;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+.text-area-grande .content {
+    -fx-background-color: #000000;
+    -fx-font-size: 16px;
+}
+
+.button-grande {
+    -fx-min-width: 180px;
+    -fx-pref-width: 180px;
+    -fx-max-width: 180px;
+    -fx-min-height: 45px;
+    -fx-font-size: 16px !important;
+    -fx-font-weight: bold !important;
+    -fx-wrap-text: false;
+}
+
+/* Ajustes no container do formulário para elementos maiores */
+.form-container-centralizado {
+    -fx-alignment: CENTER;
+    -fx-spacing: 30px;
+    -fx-background-color: linear-gradient(to bottom, #1A1814, #2D2A24);
+    -fx-padding: 35px;
+    -fx-border-color: #D4AF37;
+    -fx-border-width: 2px;
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+    -fx-effect: dropshadow(three-pass-box, rgba(212, 175, 55, 0.4), 20, 0, 0, 8);
+}
+
+/* Estilos para labels alinhadas à esquerda */
+.label-grande-esquerda {
+    -fx-font-size: 18px;
+    -fx-text-fill: #F5F5DC;
+    -fx-font-weight: bold;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 0 0 0 0;
+}
+
+/* Ajuste no container do formulário para alinhamento à esquerda */
+.form-container-centralizado {
+    -fx-alignment: CENTER_LEFT;
+    -fx-spacing: 30px;
+    -fx-background-color: linear-gradient(to bottom, #1A1814, #2D2A24);
+    -fx-padding: 35px;
+    -fx-border-color: #D4AF37;
+    -fx-border-width: 2px;
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+    -fx-effect: dropshadow(three-pass-box, rgba(212, 175, 55, 0.4), 20, 0, 0, 8);
+}
+
+/* Garantir que os campos também fiquem alinhados à esquerda */
+.combo-box-grande {
+    -fx-background-color: #000000;
+    -fx-border-color: #8B6B3D;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 0;
+    -fx-font-size: 16px;
+    -fx-pref-height: 40px;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.combo-box-grande .list-cell {
+    -fx-background-color: #000000;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 16px;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.text-field-grande {
+    -fx-background-color: #000000;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #8B6B3D;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 12 15;
+    -fx-font-size: 16px;
+    -fx-pref-height: 40px;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.date-picker-grande {
+    -fx-background-color: #000000;
+    -fx-border-color: #8B6B3D;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-font-size: 16px;
+    -fx-pref-height: 40px;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.date-picker-grande .text-field {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-size: 16px;
+    -fx-pref-height: 40px;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.text-area-grande {
+    -fx-background-color: #000000;
+    -fx-text-fill: #FFFFFF;
+    -fx-border-color: #8B6B3D;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 12 15;
+    -fx-font-size: 16px;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+.text-area-grande .content {
+    -fx-background-color: #000000;
+    -fx-font-size: 16px;
+}
+
+/* Ajuste no GridPane para alinhamento geral à esquerda */
+.grid-pane-esquerda {
+    -fx-alignment: CENTER_LEFT;
+}
+
+/* ===== DASHBOARD COM ESTILO DA TELA DE BOAS-VINDAS ===== */
+
+/* Container principal do dashboard com mesmo gradiente */
+.dashboard-content {
+    -fx-background-color: transparent;
+}
+
+/* Título principal do dashboard */
+.dashboard-main-title {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #D4AF37;
+    -fx-effect: dropshadow(three-pass-box, rgba(212, 175, 55, 0.8), 15, 0, 0, 5);
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+    -fx-padding: 10px 0 20px 0;
+}
+
+/* Cards no estilo da tela de boas-vindas */
+.dashboard-card-welcome {
+    -fx-background-color: rgba(26, 24, 20, 0.8);
+    -fx-background-radius: 10px;
+    -fx-border-color: #D4AF37;
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(212, 175, 55, 0.3), 10, 0, 0, 3);
+    -fx-alignment: center;
+}
+
+.card-titulo-welcome {
+    -fx-text-fill: #C5B358;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+.card-valor-welcome {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+.card-valor-welcome.ocupados {
+    -fx-text-fill: #e74c3c;
+}
+
+.card-valor-welcome.disponiveis {
+    -fx-text-fill: #2ecc71;
+}
+
+.card-valor-welcome.faturamento {
+    -fx-text-fill: #f39c12;
+}
+
+.card-descricao-welcome {
+    -fx-text-fill: #B8B8B8;
+    -fx-font-size: 12px;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+/* Containers de gráficos no estilo da tela de boas-vindas */
+.grafico-container-welcome {
+    -fx-background-color: rgba(26, 24, 20, 0.8);
+    -fx-background-radius: 10px;
+    -fx-border-color: #D4AF37;
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(212, 175, 55, 0.3), 10, 0, 0, 3);
+}
+
+.grafico-titulo-welcome {
+    -fx-text-fill: #F5F5DC;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+/* Ajustes para os gráficos no tema escuro */
+.chart {
+    -fx-background-color: transparent;
+}
+
+.chart-legend {
+    -fx-background-color: transparent;
+}
+
+.chart-legend-item {
+    -fx-text-fill: #F5F5DC !important;
+}
+
+.axis {
+    -fx-tick-label-fill: #F5F5DC !important;
+}
+
+.axis-label {
+    -fx-text-fill: #F5F5DC !important;
+}
+
+.chart-title {
+    -fx-text-fill: #F5F5DC !important;
+}
+
+/* Pie Chart slices colors */
+.data0.chart-pie { -fx-pie-color: #e74c3c; } /* Ocupados - Vermelho */
+.data1.chart-pie { -fx-pie-color: #2ecc71; } /* Disponíveis - Verde */
+.data2.chart-pie { -fx-pie-color: #f39c12; } /* Manutenção - Laranja */
+.data3.chart-pie { -fx-pie-color: #3498db; } /* Reservados - Azul */
+
+/* Bar Chart series colors */
+.default-color0.chart-bar { -fx-bar-fill: #e74c3c; } /* Ocupados */
+.default-color1.chart-bar { -fx-bar-fill: #2ecc71; } /* Disponíveis */

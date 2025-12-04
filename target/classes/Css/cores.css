@@ -1,0 +1,19 @@
+/* cores.css */
+.root {
+    -fx-color-primary: #D4AF37;
+    -fx-color-secondary: #C5B358;
+    -fx-color-background: #0C0B0B;
+    -fx-color-surface: #1A1814;
+    -fx-color-text-light: #F5F5DC;
+    -fx-color-text-dark: #1A1814;
+    -fx-color-border: #8B6B3D;
+}
+
+/* Gradientes usados no sistema */
+.gradient-primary {
+    -fx-background-color: linear-gradient(to bottom, #1A1814, #2D2A24);
+}
+
+.gradient-secondary {
+    -fx-background-color: linear-gradient(to bottom, #D4AF37, #C5B358);
+}

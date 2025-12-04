@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="crud_ocupacao.OcupacaoController"
+            prefWidth="750"
+            prefHeight="650"
+            stylesheets="@/Css/main.css"
+            styleClass="container-tela-inteira">
+
+    <!-- VBox principal ocupando toda a tela -->
+    <VBox spacing="20" alignment="TOP_CENTER" 
+          AnchorPane.topAnchor="0" 
+          AnchorPane.bottomAnchor="0" 
+          AnchorPane.leftAnchor="0" 
+          AnchorPane.rightAnchor="0">
+
+        <padding>
+            <Insets top="30" right="30" bottom="30" left="30"/>
+        </padding>
+
+        <!-- Título no topo e centralizado -->
+        <Label text="Check-in / Check-out" 
+               styleClass="titulo-grande" />
+
+        <!-- Container do formulário que ocupa o espaço restante -->
+        <VBox spacing="30" alignment="CENTER" VBox.vgrow="ALWAYS"
+              styleClass="form-container-centralizado">
+
+            <GridPane hgap="20" vgap="20" alignment="CENTER_LEFT">
+                <columnConstraints>
+                    <ColumnConstraints prefWidth="180" halignment="LEFT"/>
+                    <ColumnConstraints prefWidth="280"/>
+                </columnConstraints>
+                
+                <children>
+                    <!-- Linha 1 -->
+                    <Label text="Quarto:" styleClass="label-grande-esquerda" 
+                           GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <ComboBox fx:id="comboQuarto" styleClass="combo-box-grande" 
+                              GridPane.columnIndex="1" GridPane.rowIndex="0"
+                              GridPane.halignment="LEFT"/>
+                    
+                    <!-- Linha 2 -->
+                    <Label text="Cliente:" styleClass="label-grande-esquerda" 
+                           GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                    <ComboBox fx:id="comboCliente" styleClass="combo-box-grande" 
+                              GridPane.columnIndex="1" GridPane.rowIndex="1"
+                              GridPane.halignment="LEFT"/>
+                    
+                    <!-- Linha 3 -->
+                    <Label text="Check-in:" styleClass="label-grande-esquerda" 
+                           GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                    <DatePicker fx:id="dateCheckIn" styleClass="date-picker-grande" 
+                                GridPane.columnIndex="1" GridPane.rowIndex="2"
+                                GridPane.halignment="LEFT"/>
+                    
+                    <!-- Linha 4 -->
+                    <Label text="Check-out:" styleClass="label-grande-esquerda" 
+                           GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                    <DatePicker fx:id="dateCheckOut" styleClass="date-picker-grande" 
+                                GridPane.columnIndex="1" GridPane.rowIndex="3"
+                                GridPane.halignment="LEFT"/>
+                    
+                    <!-- Linha 5 -->
+                    <Label text="Nº de Hóspedes:" styleClass="label-grande-esquerda" 
+                           GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                    <TextField fx:id="txtNumeroHospedes" styleClass="text-field-grande" 
+                               GridPane.columnIndex="1" GridPane.rowIndex="4"
+                               GridPane.halignment="LEFT"/>
+                </children>
+            </GridPane>
+
+            <!-- Observações -->
+            <VBox spacing="8" alignment="CENTER_LEFT" prefWidth="450">
+                <Label text="Observações:" styleClass="label-grande-esquerda" />
+                <TextArea fx:id="txtObservacoes" prefRowCount="4" prefWidth="450" 
+                          styleClass="text-area-grande" />
+            </VBox>
+
+            <!-- Botões centralizados -->
+            <HBox spacing="20" alignment="CENTER">
+                <Button text="Realizar Check-in" onAction="#salvarOcupacao" 
+                        styleClass="button02 button-grande" />
+                <Button text="Realizar Check-out" onAction="#realizarCheckout" 
+                        styleClass="button02 button-grande" />
+                <Button text="Limpar" onAction="#limparCampos" 
+                        styleClass="button02 button-grande" />
+                <Button text="Voltar" onAction="#voltar" 
+                        styleClass="button02 button-grande" />
+            </HBox>
+        </VBox>
+    </VBox>
+</AnchorPane>

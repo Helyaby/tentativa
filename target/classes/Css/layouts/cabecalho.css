@@ -1,0 +1,59 @@
+/* cabecalho.css */
+.cabecalho {
+    -fx-background-color: linear-gradient(to right, #1A1814, #2D2A24);
+    -fx-padding: 15 20;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: -fx-color-border;
+}
+
+.titulo-principal {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-color-primary;
+    -fx-effect: dropshadow(one-pass-box, rgba(212, 175, 55, 0.6), 6, 0.0, 0, 1);
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+.relogio-label {
+    -fx-font-size: 16pt;
+    -fx-text-fill: -fx-color-text-light;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+.estacao-label {
+    -fx-font-size: 12pt;
+    -fx-text-fill: -fx-color-secondary;
+    -fx-font-style: italic;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+.nome-usuario {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-color-primary;
+    -fx-padding: 0 10 0 0;
+    -fx-font-family: "Garamond", "Times New Roman", serif;
+}
+
+.image-view {
+    -fx-effect: dropshadow(gaussian, rgba(212, 175, 55, 0.5), 6, 0, 0, 3);
+    -fx-background-radius: 20px;
+    -fx-cursor: hand;
+    -fx-border-color: -fx-color-primary;
+    -fx-border-width: 2;
+}
+
+.botao-pesquisa {
+    -fx-background-color: transparent;
+    -fx-padding: 5;
+    -fx-cursor: hand;
+    -fx-border-color: transparent;
+    -fx-effect: none;
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+    -fx-alignment: center;
+}
+
+.botao-pesquisa:hover {
+    -fx-background-color: rgba(212, 175, 55, 0.2);
+}

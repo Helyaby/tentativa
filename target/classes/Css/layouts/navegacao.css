@@ -1,0 +1,8 @@
+/* navegacao.css */
+.area-padrao {
+    -fx-background-color: linear-gradient(to bottom, #1A1814, #2D2A24);
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 15, 0, 0, 3);
+    -fx-border-color: -fx-color-border;
+    -fx-border-width: 0 1 0 0;
+    -fx-padding: 0 10 10 10;
+}

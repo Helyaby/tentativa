@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="crud_cliente.ClienteCreateController"
+            prefWidth="700" prefHeight="550"
+            minWidth="700" minHeight="550"
+            stylesheets="@/Css/main.css"
+            styleClass="modal-container">
+
+    <VBox spacing="15" alignment="CENTER" AnchorPane.topAnchor="0" AnchorPane.rightAnchor="0" 
+          AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0">
+        <children>      
+            <Label text="Cadastro de Cliente" 
+                   styleClass="modal-titulo" />
+
+            <GridPane hgap="10" vgap="10" alignment="CENTER">
+                <columnConstraints>
+                    <ColumnConstraints prefWidth="100" halignment="RIGHT"/>
+                    <ColumnConstraints prefWidth="180"/>
+                    <ColumnConstraints prefWidth="100" halignment="RIGHT"/>
+                    <ColumnConstraints prefWidth="180"/>
+                </columnConstraints>
+                
+                <children>
+                    <!-- Linha 1 -->
+                    <Label text="CPF:*" style="-fx-text-fill: #ffffff;" 
+                           GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <TextField fx:id="txtCpf" promptText="000.000.000-00" 
+                               GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                    
+                    <Label text="Nome:*" style="-fx-text-fill: #ffffff;" 
+                           GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                    <TextField fx:id="txtNome" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+                    
+                    <!-- Linha 2 -->
+                    <Label text="Email:*" style="-fx-text-fill: #ffffff;" 
+                           GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                    <TextField fx:id="txtEmail" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                    
+                    <Label text="RG:" style="-fx-text-fill: #ffffff;" 
+                           GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                    <TextField fx:id="txtRg" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+                    
+                    <!-- Linha 3 -->
+                    <Label text="Sexo:" style="-fx-text-fill: #ffffff;" 
+                           GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                    <TextField fx:id="txtSexo" promptText="M/F" 
+                               GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                    
+                    <Label text="CEP:" style="-fx-text-fill: #ffffff;" 
+                           GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+                    <TextField fx:id="txtCep" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+                    
+                    <!-- Linha 4 -->
+                    <Label text="Data Nasc.:" style="-fx-text-fill: #ffffff;" 
+                           GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                    <DatePicker fx:id="dateNascimento" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                    
+                    <Label text="Telefone:" style="-fx-text-fill: #ffffff;" 
+                           GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+                    <TextField fx:id="txtTelefone" GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+                    
+                    <!-- Linha 5 -->
+                    <Label text="Cidade:" style="-fx-text-fill: #ffffff;" 
+                           GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                    <TextField fx:id="txtCidade" GridPane.columnIndex="1" GridPane.rowIndex="4"
+                               GridPane.columnSpan="3" prefWidth="300"/>
+                </children>
+            </GridPane>
+
+            <!-- Botões centralizados -->
+            <HBox spacing="15" alignment="CENTER" styleClass="hbox-centralizado">
+                <Button text="Salvar" onAction="#salvarCliente" styleClass="button02 button-texto-completo" />
+                <Button text="Limpar" onAction="#limparCampos" styleClass="button02 button-texto-completo" />
+                <Button text="Cancelar" onAction="#voltar" styleClass="button02 button-texto-completo" />
+            </HBox>
+        </children>
+
+        <padding>
+            <Insets top="15" right="15" bottom="15" left="15" />
+        </padding>
+    </VBox>
+</AnchorPane>
